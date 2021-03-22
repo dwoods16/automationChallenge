@@ -1,18 +1,24 @@
 package tests;
 
-import org.junit.Assert;
-import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import pages.*;
 
 public class AmazonTest {
-    static WebDriver driver = new ChromeDriver();
-    public static void main(final String[] args) throws InterruptedException {
-        // Set chromedriver location
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+    public WebDriver driver;
 
+    @BeforeTest
+    public void setup() {
+        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+    }
+
+    @Test
+    public void priceTest() {
         // 1. Visit amazon.com Page
         AmazonHomePage amazonHomePage = new AmazonHomePage(driver);
         amazonHomePage.navigateToAmazonHomePage();
@@ -44,9 +50,11 @@ public class AmazonTest {
         AmazonCartPage amazonCartPage = new AmazonCartPage(driver);
         String cartPagePrice = amazonCartPage.getCartPagePriceText();
         Assert.assertEquals(searchResultPrice, cartPagePrice);
+    }
 
-        // Closing the browser and WebDriver
+   @AfterMethod
+   public void teardown() {
         driver.close();
         driver.quit();
-    }
+   }
 }
