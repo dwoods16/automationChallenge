@@ -1,4 +1,4 @@
-package pages;
+package pages_selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +18,7 @@ public class AmazonHomePage_SearchResults extends AmazonHomePage {
 
     // Click first result
     public void clickFirstResult() {
+        waitForElementToAppear(firstSearchResult);
         driver.findElement(firstSearchResult).click();
     }
 }

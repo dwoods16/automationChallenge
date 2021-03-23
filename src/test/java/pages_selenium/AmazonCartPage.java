@@ -1,4 +1,4 @@
-package pages;
+package pages_selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +12,7 @@ public class AmazonCartPage extends PageObject {
 
     // Get cart page price text
     public String getCartPagePriceText() {
+        waitForElementToAppear(cartPagePrice);
         return driver.findElement(cartPagePrice).getAttribute("textContent");
     }
 }

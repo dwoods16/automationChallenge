@@ -13,3 +13,13 @@ Selenium WebDriver - Page Object Model (either JAVA or JavaScript):
 7. Click on proceed to checkout
 
 8. On the checkout page assert price from Step3.
+
+
+## API automation using Rest-assured or Karate API Test
+
+http://dummy.restapiexample.com/ is not functional it appears so used httpbin instead
+
+1. Get request, validate status 200 and response
+2. Delete request, validate status 200 and response
+
+ 

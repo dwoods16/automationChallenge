@@ -4,7 +4,7 @@
 <suite name="Test">
     <test name="AmazonTest">
         <classes>
-            <class name="tests.AmazonTest"/>
+            <class name="tests_selenium.AmazonTest"/>
         </classes>
     </test>
 </suite>

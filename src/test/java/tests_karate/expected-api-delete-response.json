@@ -1,0 +1,18 @@
+{
+  "args": "#object",
+  "data": "#string",
+  "files": "#object",
+  "form": "#object",
+  "headers": {
+    "Accept-Encoding": "#string",
+    "Content-Length": "#string",
+    "Content-Type": "#string",
+    "Host": "httpbin.org",
+    "User-Agent": "#string",
+    "X-Amzn-Trace-Id": "#string"
+  },
+  "json": "#object",
+  "method": "DELETE",
+  "origin": "#string",
+  "url": "#string"
+}
