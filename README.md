@@ -3,7 +3,7 @@
 Selenium WebDriver - Page Object Model (either JAVA or JavaScript):
 
 1. Visit amazon.com Page
-2. Search for Book 'qa testing for beginners'
+2. Search for Book 'qa testing for beginners guide' (added 'guide' because first result had no price)
 3. Click on 1st item in the listed results.
  
 4. Before Click on add to cart Add to Cart asset price from Step3. 
@@ -20,6 +20,4 @@ Selenium WebDriver - Page Object Model (either JAVA or JavaScript):
 http://dummy.restapiexample.com/ is not functional it appears so used httpbin instead
 
 1. Get request, validate status 200 and response
-2. Delete request, validate status 200 and response
-
- 
+2. Delete request, validate status 200 and response 

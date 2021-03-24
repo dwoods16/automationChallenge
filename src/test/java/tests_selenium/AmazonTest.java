@@ -14,7 +14,7 @@ public class AmazonTest {
     @BeforeTest
     public void setup() {
         driver = new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
     }
 
     @Test
@@ -24,10 +24,10 @@ public class AmazonTest {
         amazonHomePage.navigateToAmazonHomePage();
 
         // 2. Search for Book 'qa testing for beginners'
-        amazonHomePage.enterSearch("qa testing for beginners");
+        amazonHomePage.enterSearch("qa testing for beginners guide");
         AmazonHomePage_SearchResults amazonHomePage_searchResults = amazonHomePage.clickSearch();
 
-        // 3. Click on 1st item in the listed results
+        // 3. Click on item in the listed results
         String searchResultPrice = amazonHomePage_searchResults.getFirstResultPriceText();
         amazonHomePage_searchResults.clickFirstResult();
 

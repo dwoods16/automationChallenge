@@ -1,15 +1,7 @@
 function fn() {
   var config = {
-    api: {
-        baseURL: 'https://httpbin.org/',
-    ui: {
-        amazonBaseURL: 'https://dashboard.booking.icabbi.dev',
-        }
-    }
+      apiBaseURL: 'https://httpbin.org/'
   };
-
- // karate.configure("driver", chromeDriver);
-  karate.configure('report', { showLog: true, showAllSteps: true });
 
   return config;
 }
